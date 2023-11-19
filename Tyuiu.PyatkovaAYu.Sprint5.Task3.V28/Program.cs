@@ -38,7 +38,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task3.V28
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                    *");
             Console.WriteLine("*********************************************************************************");
 
-            Console.WriteLine("Значение выражения = - 1");
+            Console.WriteLine("Значение выражения = -1");
 
             string res = ds.SaveToFileTextData(x);
 
