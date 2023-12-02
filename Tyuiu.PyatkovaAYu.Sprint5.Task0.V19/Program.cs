@@ -40,7 +40,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task0.V19
 
             string res = ds.SaveToFileTextData(x);
 
-            double y = (2 * Math.Pow(x, 2) - 1) / (Math.Sqrt(Math.Pow(x, 2) - 2));
+            double y = (2 * x * x - 1) / (Math.Sqrt(x * x - 2));
 
             y = Math.Round(y, 3);
 

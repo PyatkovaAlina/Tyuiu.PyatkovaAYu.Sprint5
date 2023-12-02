@@ -26,17 +26,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task2.V16.Lib
             int rows = matrix.GetUpperBound(0) + 1;
             int columns = matrix.Length / rows;
 
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
-                {
-                    if (matrix[i, j] == 1)
-                    {
-                        matrix[i, j] = 0;
-                    }
-                }
-            }
-
+            
             string str = "";
 
             for (int i = 0; i < rows; i++)

@@ -39,19 +39,14 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task7.V27
 
             Console.WriteLine("Данные находятся в файле: " + path);
 
-            try
-            {
-                string text = File.ReadAllText(path);
+            
+            string text = File.ReadAllText(path);
 
-                string regex = Regex.Replace(text, @"\s+", " ");
+            string regex = Regex.Replace(text, @"\s+", " ");
 
-                File.WriteAllText(outputfilePath, regex);
-                Console.WriteLine("Запись в файл произошла успешно");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Ошибка:" + ex.ToString());
-            }
+            File.WriteAllText(outputfilePath, regex);
+            Console.WriteLine("Запись в файл произошла успешно");
+            
 
             Console.WriteLine("******************************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                             *");

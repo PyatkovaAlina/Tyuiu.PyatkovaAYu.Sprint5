@@ -12,12 +12,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task2.V16
     {
         static void Main(string[] args)
         {
-            int[,] mtrx = new int[3, 3] { { 2, -4, -8 },
-                                          { 3, -7, -2 },
-                                          { 3, 8, 6 } };
-
-            int rows = mtrx.GetUpperBound(0) + 1;
-            int columns = mtrx.Length / rows;
+           
 
             DataService ds = new DataService();
 
@@ -77,11 +72,11 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task2.V16
             }
 
 
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < 3; j++)
                 {
-                    Console.Write($"{mtrx[i, j]} \t");
+                    Console.Write($"{arr[i, j]} \t");
                 }
                
                 Console.WriteLine();
@@ -93,7 +88,7 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task2.V16
             Console.WriteLine("***************************************************************************");
            
             Console.WriteLine(table.ToString());
-            string res = ds.SaveToFileTextData(mtrx);
+            string res = ds.SaveToFileTextData(arr);
 
             Console.WriteLine("Файл: " + res);
             Console.WriteLine("Создан!");

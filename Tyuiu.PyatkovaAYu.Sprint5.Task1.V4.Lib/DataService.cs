@@ -27,16 +27,25 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task1.V4.Lib
             string strY;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = (Math.Cos(x) / (x + 1)) - Math.Cos(x) * 1.3 + 3 * x;
-                strY = Convert.ToString(y);
-
-                if (x != stopValue)
+                if (x != -1)
                 {
-                    File.AppendAllText(path, strY + Environment.NewLine);
+                    y = (Math.Cos(x) / (x + 1)) - Math.Cos(x) * 1.3 + 3 * x;
+                    y = Math.Round(y, 2);
+
+                    strY = Convert.ToString(y);
+
+                    if (x != stopValue)
+                    {
+                        File.AppendAllText(path, strY + Environment.NewLine);
+                    }
+                    else
+                    {
+                        File.AppendAllText(path, strY);
+                    }
                 }
                 else
                 {
-                    File.AppendAllText(path, strY);
+                    File.AppendAllText(path, "0"+ "\n");
                 }
 
             }

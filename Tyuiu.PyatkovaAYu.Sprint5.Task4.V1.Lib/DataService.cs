@@ -15,7 +15,9 @@ namespace Tyuiu.PyatkovaAYu.Sprint5.Task4.V1.Lib
         {
             string strX = File.ReadAllText(path);
 
-            double res = Math.Round(((1 / (Math.Cos(Convert.ToDouble(strX)) + Convert.ToDouble(strX))) - 4.12 * Convert.ToDouble(strX)), 3);
+            double number = Convert.ToDouble(strX);
+            double res = ((1 / (Math.Cos(number) + number)) - 4.12 * number);
+            res = Math.Round(res, 3);
             return res;
         }
     }
